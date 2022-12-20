@@ -1,5 +1,28 @@
 :root {
-  --primary-color: #BB2649;
-  --secondary-color: #26BB98;
+  --text-color: #fff;
+  --primary-color: #000;
+  --secondary-color: #36393F;
+  --tertiary-color: #2F3136;
+  --accent-color-main: #BB2649;
+  --accent-color-alt: #26BB98;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color: #000;
+    --primary-color: #fff;
+    --secondary-color: #F2F3F5;
+    --tertiary-color: #D1D5D9;
+    --accent-color-main: #BB2649;
+    --accent-color-alt: #26BB98;
+  }
+}
+
+body {
+  font-family: 'Open Sans', 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--tertiary-color);
+  background-color: var(--primary-color);
 }
 

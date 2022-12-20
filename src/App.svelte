@@ -1,8 +1,9 @@
 <script lang="ts">
+  import Nav from "./components/Nav.svelte";
 </script>
 
 <main>
-  <!-- nav -->
+  <Nav />
   <!-- hero -->
   <!-- cards -->
   <!-- about w/ timeline -->
