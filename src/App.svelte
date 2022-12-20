@@ -1,14 +1,36 @@
 <script lang="ts">
   import Nav from "./components/Nav.svelte";
+  import Hero from "./components/Hero.svelte";
+  import { heroContent } from "./constants";
+
+  const heroProps = {
+    ...heroContent,
+    buttonText: "Learn More",
+    onButtonClick: () => {
+      console.log("clicked");
+    },
+  };
 </script>
 
-<main>
+<header>
   <Nav />
-  <!-- hero -->
+</header>
+<main>
+  <Hero {...heroProps} />
   <!-- cards -->
   <!-- about w/ timeline -->
-  <!-- footer -->
 </main>
+<footer>
+  <!-- footer -->
+</footer>
 
 <style>
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    color: var(--text-color);
+  }
 </style>
