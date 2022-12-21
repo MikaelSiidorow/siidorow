@@ -1,4 +1,7 @@
 <script lang="ts">
+  import Text from "./shared/Text.svelte";
+  import Button from "./shared/Button.svelte";
+
   export let name: string;
   export let title: string;
   export let content: string;
@@ -8,13 +11,15 @@
 </script>
 
 <section>
-  <div>
+  <div class="content">
     <hgroup>
-      <h1>{name}</h1>
-      <i>{title}</i>
+      <Text variant="h1">{name}</Text>
+      <Text variant="subtitle">{title}</Text>
     </hgroup>
-    <p>{content}</p>
-    <button on:click={onButtonClick}>{buttonText}</button>
+    <Text class="bodyText">{content}</Text>
+    <Button class="actionButton" variant="primary" on:click={onButtonClick}
+      >{buttonText}</Button
+    >
   </div>
   <figure>
     <img src={image} alt="avatar" />
@@ -55,7 +60,7 @@
     flex: 1;
   }
 
-  section div {
+  .content {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -63,65 +68,11 @@
     flex: 1;
   }
 
-  section div p {
+  section :global(.bodyText) {
     flex: 1;
   }
 
-  h1 {
-    position: relative;
-    z-index: 0;
-
-    font-size: 2rem;
-    font-weight: 1000;
-    line-height: 48px;
-    max-width: fit-content;
-    height: 48px;
-    text-transform: uppercase;
-  }
-
-  h1::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-
-    width: 100%;
-    height: 24px;
-    background-color: var(--accent-color-main);
-    transform: translate(8px, 75%);
-  }
-
-  hgroup i {
-    font-size: 1rem;
-    font-weight: 700;
-    text-transform: uppercase;
-
-    margin-left: 8px;
-    color: var(--primary-color);
-    background-color: var(--text-color);
-  }
-
-  button {
-    border: none;
-    background: none;
-    cursor: pointer;
-
+  section :global(.actionButton) {
     align-self: flex-end;
-    padding: 0.5rem 1rem;
-
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-
-    background-color: var(--accent-color-main);
-    box-shadow: 4px 4px var(--text-color);
-  }
-
-  button:hover {
-    transform: scale(1.05);
-  }
-
-  button:active {
-    transform: translate(4px, 4px);
-    box-shadow: none;
   }
 </style>
