@@ -64,3 +64,8 @@ export const tagColors = {
   html: "#E44C27",
   css: "#563E7C",
 } as const;
+
+export const footerContent = {
+  email: "mikael@siidorow.com",
+  source: "https://github.com/MikaelSiidorow/siidorow"
+} as const;

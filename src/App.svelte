@@ -2,7 +2,8 @@
   import Nav from "./components/Nav.svelte";
   import Hero from "./components/Hero.svelte";
   import Projects from "./components/Projects.svelte";
-  import { heroContent, projects } from "./constants";
+  import Footer from "./components/Footer.svelte";
+  import { heroContent, projects, footerContent } from "./constants";
 
   const heroProps = {
     ...heroContent,
@@ -18,9 +19,7 @@
   <Projects {projects} />
   <!-- about w/ timeline -->
 </main>
-<footer>
-  <!-- footer -->
-</footer>
+<Footer {...footerContent} />
 
 <style>
   main {
