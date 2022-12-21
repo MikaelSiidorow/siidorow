@@ -34,6 +34,8 @@
     border: 4px solid var(--text-color);
     box-shadow: 24px 24px var(--accent-color-main),
       24px 24px 0 4px var(--text-color);
+
+    max-width: 900px;
   }
 
   section::before {

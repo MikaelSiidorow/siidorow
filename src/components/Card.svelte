@@ -51,6 +51,8 @@
     flex-direction: column;
     z-index: 0;
 
+    max-width: 300px;
+
     padding: 0.5rem;
   }
 
