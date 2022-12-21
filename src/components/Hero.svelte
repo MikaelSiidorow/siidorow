@@ -14,7 +14,7 @@
   <div class="content">
     <hgroup>
       <Text variant="h1" size="lg">{name}</Text>
-      <Text variant="subtitle2" size="sm">{title}</Text>
+      <Text variant="subtitle2" size="sm" indent>{title}</Text>
     </hgroup>
     <Text class="bodyText">{content}</Text>
     <Button class="actionButton" variant="primary" on:click={onButtonClick}

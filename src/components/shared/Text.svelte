@@ -1,5 +1,5 @@
 <script lang="ts">
-  type TextVariant = "h1" | "subtitle1" | "subtitle2" | "body";
+  type TextVariant = "h1" | "h2" | "subtitle1" | "subtitle2" | "body";
   type TextSize = "xs" | "sm" | "md" | "lg" | "xl";
 
   const sizes = {
@@ -12,18 +12,29 @@
 
   export let variant: TextVariant = "body";
   export let size: TextSize = "md";
+  export let indent: boolean = false;
 </script>
 
 {#if variant === "h1"}
   <h1 class={$$props.class} style="--text-size: {sizes[size]}">
     <slot />
   </h1>
+{:else if variant === "h2"}
+  <h2 class={$$props.class} style="--text-size: {sizes[size]}">
+    <slot />
+  </h2>
 {:else if variant === "subtitle1"}
-  <i class="subtitle1 {$$props.class}" style="--text-size: {sizes[size]}">
+  <i
+    class="subtitle1 {indent && 'indent'} {$$props.class}"
+    style="--text-size: {sizes[size]}"
+  >
     <slot />
   </i>
 {:else if variant === "subtitle2"}
-  <i class="subtitle2 {$$props.class}" style="--text-size: {sizes[size]}">
+  <i
+    class="subtitle2 {indent && 'indent'} {$$props.class}"
+    style="--text-size: {sizes[size]}"
+  >
     <slot />
   </i>
 {:else}
@@ -56,10 +67,20 @@
     transform: translate(calc(var(--text-size) * 0.5), 60%);
   }
 
+  h2 {
+    font-size: var(--text-size);
+    font-weight: 1000;
+    line-height: calc(var(--text-size) * 1.25);
+    text-transform: uppercase;
+  }
+
   i {
     font-weight: 1000;
     font-size: var(--text-size);
     text-transform: uppercase;
+  }
+
+  .indent {
     margin-left: calc(var(--text-size));
   }
 
