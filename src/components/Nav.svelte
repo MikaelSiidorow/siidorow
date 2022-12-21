@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Icon from "./Icon.svelte";
+  import Icon from "./shared/Icon.svelte";
   import { socials } from "../constants";
 </script>
 
