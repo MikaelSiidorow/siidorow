@@ -111,4 +111,10 @@
   .card :global(.linkIcon) {
     fill: var(--text-color);
   }
+
+  .card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
 </style>
