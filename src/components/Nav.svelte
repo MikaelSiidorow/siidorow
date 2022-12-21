@@ -4,7 +4,7 @@
 </script>
 
 <nav>
-  <a href="/">
+  <a href="#hero">
     <Icon class="homeIcon" icon="logo" size="2rem" />
     <span>Siidorow</span>
   </a>

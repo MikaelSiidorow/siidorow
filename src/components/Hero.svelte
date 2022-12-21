@@ -7,10 +7,9 @@
   export let content: string;
   export let buttonText: string;
   export let image: string;
-  export let onButtonClick: () => void;
 </script>
 
-<section>
+<section id="hero">
   <div class="content">
     <hgroup>
       <Text variant="h1" size="lg">{name}</Text>
@@ -19,7 +18,7 @@
       </p>
     </hgroup>
     <Text class="bodyText">{content}</Text>
-    <Button class="actionButton" variant="primary" on:click={onButtonClick}
+    <Button class="actionButton" variant="primary" href="#projects" type="link"
       >{buttonText}</Button
     >
   </div>

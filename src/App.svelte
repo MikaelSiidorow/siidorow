@@ -7,9 +7,6 @@
   const heroProps = {
     ...heroContent,
     buttonText: "Learn More",
-    onButtonClick: () => {
-      console.log("clicked");
-    },
   };
 </script>
 

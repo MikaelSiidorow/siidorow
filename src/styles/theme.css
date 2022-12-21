@@ -5,6 +5,8 @@
   --tertiary-color: #2F3136;
   --accent-color-main: #26BB98;
   --accent-color-alt: #BB2649;
+
+  scroll-behavior: smooth;
 }
 
 @media (prefers-color-scheme: light) {

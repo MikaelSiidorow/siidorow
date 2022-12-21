@@ -2,20 +2,22 @@
   type ButtonVariant = "primary";
 
   export let variant: ButtonVariant;
+  export let type: "button" | "link" = "button";
+  export let href: string = undefined;
 </script>
 
-{#if variant === "primary"}
-  <button class={"primary " + $$props.class} on:click>
+{#if type === "button"}
+  <button class="{variant} {$$props.class}" on:click>
     <slot />
   </button>
+{:else if type === "link"}
+  <a {href} class="{variant} {$$props.class}">
+    <slot />
+  </a>
 {/if}
 
 <style>
-  button {
-    border: none;
-    background: none;
-    cursor: pointer;
-
+  .primary {
     padding: 0.5rem 1rem;
 
     font-size: 1.5rem;
@@ -26,12 +28,23 @@
     box-shadow: 4px 4px var(--text-color);
   }
 
-  button:hover {
+  .primary:hover {
     transform: scale(1.05);
   }
 
-  button:active {
+  .primary:active {
     transform: translate(4px, 4px);
     box-shadow: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
   }
 </style>

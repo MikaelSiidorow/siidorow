@@ -6,7 +6,7 @@
   export let projects: Project[];
 </script>
 
-<section>
+<section id="projects">
   <hgroup>
     <p>
       <Text variant="subtitle1" indent>My personal</Text>
@@ -32,7 +32,7 @@
   .content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 3rem;
   }
 
   @media (max-width: 900px) {
