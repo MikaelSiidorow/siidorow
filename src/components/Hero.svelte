@@ -77,4 +77,10 @@
   section :global(.actionButton) {
     align-self: flex-end;
   }
+
+  section img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
 </style>

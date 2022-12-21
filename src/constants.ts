@@ -23,7 +23,7 @@ export const heroContent = {
   name: "Mikael Siidorow",
   title: "Software Hobbyist",
   content: "I am a computer science student with a passion for self-learning and creating projects in my spare time. In addition to my hobby projects, I have also gained some professional experience as a software developer and course developer. I am proficient in languages such as Scala, and TypeScript, and have experience with frameworks such as React, Node.js, and React Native. I am seeking software developer roles and internships where I can continue to grow and develop my skills next summer.",
-  image: "https://avatars.githubusercontent.com/u/87767032?v=4",
+  image: "avatar.png",
 } as const
 
 export const projects: Project[] = [
@@ -45,6 +45,7 @@ export const projects: Project[] = [
     name: "Kipubot",
     description: "A telegram bot for showing graphs and stats about friday bottle raffles",
     image: "kipubot.png",
+    link: "https://github.com/MikaelSiidorow/kipubot",
     tags: ["python", "postgres"],
   },
 ]
