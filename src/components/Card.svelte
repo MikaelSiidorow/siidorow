@@ -21,16 +21,19 @@
     {/if}
   </figure>
   <hgroup>
-    {#if link}
-      <a href={link} target="_blank" rel="noopener noreferrer"
-        ><Text variant="h2" size="md"
-          >{name} <Icon class="linkIcon" icon="open_in_new" /></Text
-        ></a
-      >
-    {:else}
-      <Text variant="h2" size="md">{name}</Text>
-    {/if}
-    <Text variant="subtitle2" size="sm">{description}</Text>
+    <Text variant="h2" size="md">
+      {#if link}
+        <a href={link} target="_blank" rel="noopener noreferrer"
+          >{name} <Icon class="linkIcon" icon="open_in_new" /></a
+        >
+      {:else}
+        {name}
+      {/if}
+    </Text>
+
+    <p>
+      <Text variant="subtitle2" size="sm">{description}</Text>
+    </p>
   </hgroup>
   <div class="tagsContainer">
     <Text variant="subtitle1" size="xs" class="tags">

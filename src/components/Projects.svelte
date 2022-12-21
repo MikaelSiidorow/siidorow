@@ -8,7 +8,9 @@
 
 <section>
   <hgroup>
-    <Text variant="subtitle1" indent>My personal</Text>
+    <p>
+      <Text variant="subtitle1" indent>My personal</Text>
+    </p>
     <Text variant="h1" size="xl">Projects</Text>
   </hgroup>
   <div class="content">
@@ -33,13 +35,13 @@
     gap: 1rem;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     .content {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 600px) {
     .content {
       grid-template-columns: 1fr;
     }

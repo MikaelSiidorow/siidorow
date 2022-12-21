@@ -31,7 +31,7 @@
     flex-direction: column;
     align-items: center;
     gap: 20vh;
-    padding: 32px;
+    margin: 5rem;
     color: var(--text-color);
   }
 </style>

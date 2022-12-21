@@ -47,6 +47,7 @@
   h1 {
     position: relative;
     z-index: 0;
+    white-space: nowrap;
 
     font-size: var(--text-size);
     font-weight: 1000;

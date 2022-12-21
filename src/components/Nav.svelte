@@ -28,7 +28,7 @@
     background-color: var(--secondary-color);
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     nav {
       flex-direction: column;
       gap: 1rem;

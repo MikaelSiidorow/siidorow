@@ -14,7 +14,9 @@
   <div class="content">
     <hgroup>
       <Text variant="h1" size="lg">{name}</Text>
-      <Text variant="subtitle2" size="sm" indent>{title}</Text>
+      <p>
+        <Text variant="subtitle2" size="sm" indent>{title}</Text>
+      </p>
     </hgroup>
     <Text class="bodyText">{content}</Text>
     <Button class="actionButton" variant="primary" on:click={onButtonClick}
@@ -41,7 +43,7 @@
     border-right: 4px solid var(--text-color);
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     section {
       flex-direction: column;
     }
