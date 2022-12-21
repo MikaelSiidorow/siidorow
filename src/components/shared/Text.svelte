@@ -1,11 +1,13 @@
 <script lang="ts">
-  type TextVariant = "h1" | "subtitle" | "body";
-  type TextSize = "sm" | "md" | "lg";
+  type TextVariant = "h1" | "subtitle1" | "subtitle2" | "body";
+  type TextSize = "xs" | "sm" | "md" | "lg" | "xl";
 
   const sizes = {
+    xs: "0.75rem", // 12px
     sm: "1rem", // 16px
-    md: "2rem", // 32px
-    lg: "3rem", // 48px
+    md: "1.5rem", // 24px
+    lg: "2rem", // 32px
+    xl: "3rem", // 48px
   } as const;
 
   export let variant: TextVariant = "body";
@@ -16,8 +18,12 @@
   <h1 class={$$props.class} style="--text-size: {sizes[size]}">
     <slot />
   </h1>
-{:else if variant === "subtitle"}
-  <i class={$$props.class} style="--text-size: {sizes[size]}">
+{:else if variant === "subtitle1"}
+  <i class="subtitle1 {$$props.class}" style="--text-size: {sizes[size]}">
+    <slot />
+  </i>
+{:else if variant === "subtitle2"}
+  <i class="subtitle2 {$$props.class}" style="--text-size: {sizes[size]}">
     <slot />
   </i>
 {:else}
@@ -33,9 +39,9 @@
 
     font-size: var(--text-size);
     font-weight: 1000;
-    line-height: calc(var(--text-size) * 1.5);
+    line-height: calc(var(--text-size) * 1.25);
     max-width: fit-content;
-    height: calc(var(--text-size) * 1.5);
+    height: calc(var(--text-size) * 1.25);
     text-transform: uppercase;
   }
 
@@ -47,15 +53,17 @@
     width: 100%;
     height: calc(var(--text-size) * 0.75);
     background-color: var(--accent-color-main);
-    transform: translate(5%, 75%);
+    transform: translate(calc(var(--text-size) * 0.5), 60%);
   }
 
   i {
-    font-size: 1rem;
-    font-weight: 700;
+    font-weight: 1000;
+    font-size: var(--text-size);
     text-transform: uppercase;
+    margin-left: calc(var(--text-size));
+  }
 
-    margin-left: 8px;
+  .subtitle2 {
     color: var(--primary-color);
     background-color: var(--text-color);
   }
