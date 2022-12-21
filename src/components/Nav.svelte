@@ -11,7 +11,7 @@
   <ul>
     {#each socials as { id, url } (id)}
       <li>
-        <a href={url}>
+        <a href={url} aria-label="open my {id}">
           <Icon class="socialIcon" icon={id} size="2rem" />
         </a>
       </li>
