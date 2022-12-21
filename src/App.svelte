@@ -1,7 +1,8 @@
 <script lang="ts">
   import Nav from "./components/Nav.svelte";
   import Hero from "./components/Hero.svelte";
-  import { heroContent } from "./constants";
+  import Projects from "./components/Projects.svelte";
+  import { heroContent, projects } from "./constants";
 
   const heroProps = {
     ...heroContent,
@@ -17,7 +18,7 @@
 </header>
 <main>
   <Hero {...heroProps} />
-  <!-- cards -->
+  <Projects {projects} />
   <!-- about w/ timeline -->
 </main>
 <footer>
@@ -29,8 +30,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
-    padding: 2rem;
+    gap: 20vh;
+    padding: 32px;
     color: var(--text-color);
   }
 </style>
