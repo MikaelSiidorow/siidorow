@@ -25,7 +25,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
-    background-color: var(--secondary-color);
   }
 
   @media (max-width: 600px) {

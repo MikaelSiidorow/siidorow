@@ -3,8 +3,8 @@
   --primary-color: #000;
   --secondary-color: #36393F;
   --tertiary-color: #2F3136;
-  --accent-color-main: #26BB98;
-  --accent-color-alt: #BB2649;
+  --accent-color-main: #BB2649;
+  --accent-color-alt: #26BB98;
 
   scroll-behavior: smooth;
 }

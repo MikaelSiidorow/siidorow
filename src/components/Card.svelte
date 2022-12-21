@@ -52,7 +52,6 @@
     z-index: 0;
 
     padding: 0.5rem;
-    background-color: var(--secondary-color);
   }
 
   .card::after {
