@@ -34,7 +34,7 @@
         wrapped={!!link}
         wrapper="a"
         wrapperProps={{
-          class: "flex gap-1 no-underline hover:underline",
+          class: "flex items-center gap-1 no-underline hover:underline",
           href: link,
           target: "_blank",
           rel: "noopener noreferrer",
