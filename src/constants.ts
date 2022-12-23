@@ -34,7 +34,7 @@ export const projects: Project[] = [
       "New portfolio website designed from scratch to be more unique.",
     image: "siidorow.png",
     link: "https://github.com/MikaelSiidorow/siidorow",
-    tags: ["svelte", "typescript"],
+    tags: ["svelte", "typescript", "tailwind"],
   },
   {
     name: "RealMeal.",
@@ -65,6 +65,7 @@ export const tagColors = {
   firebase: "#FFCA28",
   python: "#3572A5",
   postgres: "#336791",
+  tailwind: "#38BDF8",
 } as const;
 
 export const footerContent = {

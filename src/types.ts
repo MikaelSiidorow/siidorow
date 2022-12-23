@@ -10,7 +10,8 @@ export type Tag =
   | "firebase"
   | "react native"
   | "python"
-  | "postgres";
+  | "postgres"
+  | "tailwind";
 export interface Project {
   name: string;
   description: string;
