@@ -3,71 +3,31 @@
   import { socials } from "../constants";
 </script>
 
-<nav>
-  <a href="#hero">
-    <Icon class="homeIcon" icon="logo" size="2rem" />
-    <span>Siidorow</span>
+<nav
+  class="flex flex-col items-center justify-between gap-4 py-4 px-8 sm:flex-row sm:gap-0"
+>
+  <a
+    href="#hero"
+    class="group flex items-center no-underline hover:text-accent-main hover:dark:text-accent-alt"
+  >
+    <Icon
+      class="fill-black group-hover:fill-accent-main dark:fill-white group-hover:dark:fill-accent-alt"
+      icon="logo"
+      size="2rem"
+    />
+    <span class="ml-2 text-2xl">Siidorow</span>
   </a>
-  <ul>
+  <ul class="flex gap-4">
     {#each socials as { id, url } (id)}
       <li>
         <a href={url} aria-label="open my {id}">
-          <Icon class="socialIcon" icon={id} size="2rem" />
+          <Icon
+            class="fill-black hover:fill-accent-main dark:fill-white hover:dark:fill-accent-alt"
+            icon={id}
+            size="2rem"
+          />
         </a>
       </li>
     {/each}
   </ul>
 </nav>
-
-<style>
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-  }
-
-  @media (max-width: 600px) {
-    nav {
-      flex-direction: column;
-      gap: 1rem;
-    }
-  }
-
-  nav a {
-    display: flex;
-    align-items: center;
-    color: var(--text-color);
-    text-decoration: none;
-  }
-
-  nav a:hover {
-    color: var(--accent-color-main);
-  }
-
-  nav a :global(.homeIcon) {
-    fill: var(--text-color);
-  }
-
-  nav a:hover :global(.homeIcon) {
-    fill: var(--accent-color-main);
-  }
-
-  nav a span {
-    margin-left: 0.5rem;
-    font-size: 1.5rem;
-  }
-
-  nav ul {
-    display: flex;
-    list-style: none;
-    gap: 1rem;
-  }
-
-  :global(.socialIcon) {
-    fill: var(--text-color);
-  }
-  :global(.socialIcon:hover) {
-    fill: var(--accent-color-main);
-  }
-</style>

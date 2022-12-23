@@ -6,73 +6,42 @@
   export let source: string;
 </script>
 
-<footer>
-  <a href="#hero">
-    <Icon class="homeIcon" icon="logo" size="2rem" />
-    <span>Siidorow</span>
+<footer class="flex flex-col items-center gap-8 py-8">
+  <a
+    href="#hero"
+    class="group flex items-center no-underline hover:text-accent-main hover:dark:text-accent-alt"
+  >
+    <Icon
+      class="fill-black group-hover:fill-accent-main dark:fill-white dark:group-hover:fill-accent-alt"
+      icon="logo"
+      size="2rem"
+    />
+    <span class="ml-2 text-2xl">Siidorow</span>
   </a>
-  <ul>
+  <ul class="flex flex-col gap-2">
     <li>
-      <a href="mailto:{email}">
-        <Text variant="subtitle2" size="xs" class="linkName">Email:</Text>
-        <Text variant="subtitle1" size="xs">{email}</Text></a
+      <a
+        href="mailto:{email}"
+        class="flex items-center no-underline hover:text-accent-main hover:dark:text-accent-alt"
+      >
+        <Text variant="subtitle2" class="mr-2 text-xs">Email:</Text>
+        <Text variant="subtitle1" class="text-xs">{email}</Text></a
       >
     </li>
     <li>
-      <a href={source} target="_blank" rel="noopener noreferrer">
-        <Text variant="subtitle2" size="xs" class="linkName">Source:</Text>
-        <Text variant="subtitle1" size="xs">GitHub</Text>
-        <Icon class="linkIcon" icon="open_in_new" />
+      <a
+        href={source}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group flex items-center no-underline hover:text-accent-main hover:dark:text-accent-alt"
+      >
+        <Text variant="subtitle2" class="mr-2 text-xs">Source:</Text>
+        <Text variant="subtitle1" class="text-xs">GitHub</Text>
+        <Icon
+          class="ml-1 fill-black group-hover:fill-accent-main dark:fill-white dark:group-hover:fill-accent-alt"
+          icon="open_in_new"
+        />
       </a>
     </li>
   </ul>
 </footer>
-
-<style>
-  footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 0;
-    gap: 2rem;
-  }
-
-  footer a {
-    display: flex;
-    align-items: center;
-    color: var(--text-color);
-    text-decoration: none;
-  }
-
-  footer a:hover {
-    color: var(--accent-color-main);
-  }
-
-  footer a :global(.homeIcon) {
-    fill: var(--text-color);
-  }
-
-  footer a:hover :global(.homeIcon) {
-    fill: var(--accent-color-main);
-  }
-
-  ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  li :global(.linkName) {
-    margin-right: 0.5rem;
-  }
-
-  a :global(.linkIcon) {
-    fill: var(--text-color);
-    margin-left: 0.25rem;
-  }
-
-  a:hover :global(.linkIcon) {
-    fill: var(--accent-color-main);
-  }
-</style>

@@ -14,20 +14,11 @@
 <header>
   <Nav />
 </header>
-<main>
+<main
+  class="m-20 flex flex-col items-center gap-[20vh] text-black dark:text-white"
+>
   <Hero {...heroProps} />
   <Projects {projects} />
   <!-- about w/ timeline -->
 </main>
 <Footer {...footerContent} />
-
-<style>
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20vh;
-    margin: 5rem;
-    color: var(--text-color);
-  }
-</style>

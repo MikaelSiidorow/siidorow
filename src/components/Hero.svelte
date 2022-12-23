@@ -9,78 +9,23 @@
   export let image: string;
 </script>
 
-<section id="hero">
-  <div class="content">
+<section
+  id="hero"
+  class="flex max-w-xl flex-col border-4 border-black shadow-repeat before:border-b-4 before:border-black dark:border-white dark:shadow-repeat-dark dark:before:border-white lg:max-w-4xl lg:flex-row lg:before:border-r-4"
+>
+  <div id="card-content" class="flex flex-1 flex-col gap-4 p-4">
     <hgroup>
       <Text variant="h1" size="lg">{name}</Text>
       <p>
-        <Text variant="subtitle2" size="sm" indent>{title}</Text>
+        <Text variant="subtitle2" class="ml-4">{title}</Text>
       </p>
     </hgroup>
-    <Text class="bodyText">{content}</Text>
-    <Button class="actionButton" variant="primary" href="#projects" type="link"
+    <Text class="flex-1">{content}</Text>
+    <Button class="self-end" variant="primary" href="#projects" type="link"
       >{buttonText}</Button
     >
   </div>
-  <figure>
-    <img src={image} alt="avatar" />
+  <figure class="-order-1 flex flex-1 items-center justify-center p-6">
+    <img class="aspect-square w-full object-cover" src={image} alt="avatar" />
   </figure>
 </section>
-
-<style>
-  section {
-    display: flex;
-
-    border: 4px solid var(--text-color);
-    box-shadow: 24px 24px var(--accent-color-main),
-      24px 24px 0 4px var(--text-color);
-
-    max-width: 900px;
-  }
-
-  section::before {
-    content: "";
-    border-right: 4px solid var(--text-color);
-  }
-
-  @media (max-width: 900px) {
-    section {
-      flex-direction: column;
-    }
-
-    section::before {
-      border-bottom: 4px solid var(--text-color);
-    }
-  }
-
-  figure {
-    order: -1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
-    flex: 1;
-  }
-
-  .content {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
-    flex: 1;
-  }
-
-  section :global(.bodyText) {
-    flex: 1;
-  }
-
-  section :global(.actionButton) {
-    align-self: flex-end;
-  }
-
-  section img {
-    width: 100%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-  }
-</style>

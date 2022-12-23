@@ -1,3 +1,20 @@
 @tailwind base;
+@layer base {
+  html {
+    font-family: "Open Sans", "Roboto", sans-serif;
+    @apply scroll-smooth;
+    @apply text-black dark:text-white;
+    @apply bg-white dark:bg-black;
+    --accent-color-main: #bb2649;
+    --accent-color-alt: #26bb98;
+  }
+
+  @media (prefers-color-scheme: light) {
+    html {
+      --accent-color-main: #26bb98;
+      --accent-color-alt: #bb2649;
+    }
+  }
+}
 @tailwind components;
 @tailwind utilities;

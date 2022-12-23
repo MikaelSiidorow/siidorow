@@ -6,44 +6,16 @@
   export let projects: Project[];
 </script>
 
-<section id="projects">
+<section id="projects" class="flex flex-col items-center gap-8 py-8">
   <hgroup>
     <p>
-      <Text variant="subtitle1" indent>My personal</Text>
+      <Text variant="subtitle1" class="ml-6 text-2xl">My personal</Text>
     </p>
     <Text variant="h1" size="xl">Projects</Text>
   </hgroup>
-  <div class="content">
+  <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
     {#each projects as project (project.name)}
       <Card {...project} />
     {/each}
   </div>
 </section>
-
-<style>
-  section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 0;
-    gap: 2rem;
-  }
-
-  .content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-  }
-
-  @media (max-width: 900px) {
-    .content {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (max-width: 600px) {
-    .content {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>

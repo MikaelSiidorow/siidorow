@@ -1,6 +1,7 @@
 <script lang="ts">
   import Icon from "./shared/Icon.svelte";
   import Text from "./shared/Text.svelte";
+  import ConditionalWrapper from "./shared/ConditionalWrapper.svelte";
   import { tagColors } from "../constants";
 
   export let name: string;
@@ -10,113 +11,54 @@
   export let tags: string[];
 </script>
 
-<div class="card">
+<div
+  id="card-{name}"
+  class="relative z-0 flex max-w-xs flex-col p-2 before:pointer-events-none before:absolute before:top-0 before:left-0 before:h-full before:w-full before:border-4 before:border-black after:absolute after:-z-10 after:h-full after:w-full after:bg-accent-main before:dark:border-white after:dark:bg-accent-alt"
+>
   <figure>
-    {#if link}
-      <a href={link} target="_blank" rel="noopener noreferrer">
-        <img src={image} alt={name} />
-      </a>
-    {:else}
-      <img src={image} alt={name} />
-    {/if}
+    <ConditionalWrapper
+      wrapped={!!link}
+      wrapper="a"
+      wrapperProps={{
+        href: link,
+        target: "_blank",
+        rel: "noopener noreferrer",
+      }}
+    >
+      <img class="aspect-square w-max object-cover" src={image} alt={name} />
+    </ConditionalWrapper>
   </figure>
   <hgroup>
-    <Text variant="h2" size="md">
-      {#if link}
-        <a href={link} target="_blank" rel="noopener noreferrer"
-          >{name} <Icon class="linkIcon" icon="open_in_new" /></a
-        >
-      {:else}
+    <Text variant="h2" class="text-2xl">
+      <ConditionalWrapper
+        wrapped={!!link}
+        wrapper="a"
+        wrapperProps={{
+          class: "flex gap-1 no-underline hover:underline",
+          href: link,
+          target: "_blank",
+          rel: "noopener noreferrer",
+        }}
+      >
         {name}
-      {/if}
+        {#if link}
+          <Icon class="fill-black dark:fill-white" icon="open_in_new" />
+        {/if}
+      </ConditionalWrapper>
     </Text>
-
     <p>
-      <Text variant="subtitle2" size="sm">{description}</Text>
+      <Text variant="subtitle2">{description}</Text>
     </p>
   </hgroup>
-  <div class="tagsContainer">
-    <Text variant="subtitle1" size="xs" class="tags">
+  <div class="-mx-2 border-t-4 border-t-black dark:border-t-white ">
+    <Text variant="subtitle1" class="ml-2 inline-block text-xs">
       {#each tags as tag (tag)}
-        <span class="tag" style="--tag-color: {tagColors[tag]}">{tag} </span>
+        <span
+          class="inline-block before:mr-1 before:text-[color:var(--tag-color)] before:content-['■'] after:italic after:[&:not(:last-child)]:mr-1 after:[&:not(:last-child)]:content-['|']"
+          style="--tag-color: {tagColors[tag]}"
+          >{tag}
+        </span>
       {/each}
     </Text>
   </div>
 </div>
-
-<style>
-  .card {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    z-index: 0;
-
-    max-width: 300px;
-
-    padding: 0.5rem;
-  }
-
-  .card::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-
-    width: 100%;
-    height: 100%;
-    background-color: var(--accent-color-main);
-  }
-
-  .card::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 4px solid var(--text-color);
-    pointer-events: none;
-  }
-
-  .card .tagsContainer {
-    border-top: 4px solid var(--text-color);
-    margin: 0 -0.5rem;
-  }
-
-  .card :global(.tags) {
-    margin-left: 0.5rem;
-    display: inline-block;
-  }
-
-  .card .tag {
-    display: inline-block;
-  }
-  .card .tag::before {
-    content: "■ ";
-    color: var(--tag-color);
-  }
-
-  .card :global(.tag:not(:last-child)::after) {
-    content: "|";
-    margin-right: 0.5rem;
-    font-style: italic;
-  }
-
-  .card a {
-    text-decoration: none;
-    color: var(--text-color);
-  }
-
-  .card a:hover {
-    text-decoration: underline;
-  }
-
-  .card :global(.linkIcon) {
-    fill: var(--text-color);
-  }
-
-  .card img {
-    width: 100%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-  }
-</style>
