@@ -1,10 +1,10 @@
 :root {
   --text-color: #fff;
   --primary-color: #000;
-  --secondary-color: #36393F;
-  --tertiary-color: #2F3136;
-  --accent-color-main: #BB2649;
-  --accent-color-alt: #26BB98;
+  --secondary-color: #36393f;
+  --tertiary-color: #2f3136;
+  --accent-color-main: #bb2649;
+  --accent-color-alt: #26bb98;
 
   scroll-behavior: smooth;
 }
@@ -13,18 +13,17 @@
   :root {
     --text-color: #000;
     --primary-color: #fff;
-    --secondary-color: #F2F3F5;
-    --tertiary-color: #D1D5D9;
-    --accent-color-main: #26BB98;
-    --accent-color-alt: #BB2649;
+    --secondary-color: #f2f3f5;
+    --tertiary-color: #d1d5d9;
+    --accent-color-main: #26bb98;
+    --accent-color-alt: #bb2649;
   }
 }
 
 body {
-  font-family: 'Open Sans', 'Roboto', sans-serif;
+  font-family: "Open Sans", "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: var(--text-color);
   background-color: var(--primary-color);
 }
-
