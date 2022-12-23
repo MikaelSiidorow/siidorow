@@ -32,7 +32,7 @@ export const projects: Project[] = [
     name: "siidorow.com",
     description:
       "New portfolio website designed from scratch to be more unique.",
-    image: "siidorow.png",
+    image: "siidorow.svg",
     link: "https://github.com/MikaelSiidorow/siidorow",
     tags: ["svelte", "typescript", "tailwind"],
   },
