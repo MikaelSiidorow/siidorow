@@ -25,7 +25,11 @@
         rel: "noopener noreferrer",
       }}
     >
-      <img class="aspect-square w-max object-cover" src={image} alt={name} />
+      <img
+        class="aspect-square w-max bg-black object-cover"
+        src={image}
+        alt={name}
+      />
     </ConditionalWrapper>
   </figure>
   <hgroup>
