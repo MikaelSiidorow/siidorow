@@ -29,6 +29,14 @@ export const heroContent = {
 
 export const projects: Project[] = [
   {
+    name: "TiKUI",
+    description:
+      "A WIP React component library for Tietokilta, built with Tailwind CSS.",
+    image: "tiklogo.webp",
+    link: "https://github.com/tietokilta/ui",
+    tags: ["react", "typescript", "tailwind"],
+  },
+  {
     name: "siidorow.com",
     description:
       "New portfolio website designed from scratch to be more unique.",
