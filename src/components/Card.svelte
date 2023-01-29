@@ -29,6 +29,7 @@
         class="aspect-square w-max bg-black object-cover"
         src={image}
         alt={name}
+        loading="lazy"
       />
     </ConditionalWrapper>
   </figure>
