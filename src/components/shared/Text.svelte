@@ -9,6 +9,8 @@
     },
   } as const;
 
+  let _class: string = "";
+  export { _class as class };
   export let variant: TextVariant = "body";
   export let size: TextSize = "lg";
 </script>
@@ -16,26 +18,26 @@
 {#if variant === "h1"}
   <h1
     class="relative z-0 max-w-fit whitespace-nowrap font-[1000] uppercase before:absolute before:-z-10 before:w-full before:bg-accent-main dark:before:bg-accent-alt {classes
-      .h1[size]} {$$props.class}"
+      .h1[size]} {_class}"
   >
     <slot />
   </h1>
 {:else if variant === "h2"}
-  <h2 class="font-[1000] uppercase {$$props.class}">
+  <h2 class="font-[1000] uppercase {_class}">
     <slot />
   </h2>
 {:else if variant === "subtitle1"}
-  <i class="font-[1000] uppercase {$$props.class}">
+  <i class="font-[1000] uppercase {_class}">
     <slot />
   </i>
 {:else if variant === "subtitle2"}
   <i
-    class="bg-black font-[1000] uppercase text-white dark:bg-white dark:text-black {$$props.class}"
+    class="bg-black font-[1000] uppercase text-white dark:bg-white dark:text-black {_class}"
   >
     <slot />
   </i>
 {:else}
-  <p class={$$props.class}>
+  <p class={_class}>
     <slot />
   </p>
 {/if}

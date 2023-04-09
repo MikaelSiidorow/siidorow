@@ -55,7 +55,7 @@
       <Text variant="subtitle2">{description}</Text>
     </p>
   </hgroup>
-  <div class="-mx-2 border-t-4 border-t-black dark:border-t-white ">
+  <div class="-mx-2 border-t-4 border-t-black dark:border-t-white">
     <Text variant="subtitle1" class="ml-2 inline-block text-xs">
       {#each tags as tag (tag)}
         <span
