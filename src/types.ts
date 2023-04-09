@@ -1,21 +1,9 @@
-export type Tag =
-  | "react"
-  | "vue"
-  | "svelte"
-  | "node"
-  | "typescript"
-  | "javascript"
-  | "html"
-  | "css"
-  | "firebase"
-  | "react native"
-  | "python"
-  | "postgres"
-  | "tailwind";
+import { tagColors } from "./constants";
+export type Tag = keyof typeof tagColors;
 export interface Project {
-  name: string;
-  description: string;
-  image: string;
-  link?: string;
-  tags: Tag[];
+  readonly name: string;
+  readonly description: string;
+  readonly image: string;
+  readonly link?: string;
+  readonly tags: Tag[];
 }
