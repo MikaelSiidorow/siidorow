@@ -15,7 +15,7 @@
       icon="logo"
       size="2rem"
     />
-    <span class="ml-2 text-2xl">Siidorow</span>
+    <h1 class="ml-2 text-2xl">Siidorow</h1>
   </a>
   <ul class="flex gap-4">
     {#each socials as { id, url } (id)}

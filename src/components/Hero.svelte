@@ -15,10 +15,8 @@
 >
   <div id="card-content" class="flex flex-1 flex-col gap-4 p-4">
     <hgroup>
-      <Text variant="h1" size="lg">{name}</Text>
-      <p>
-        <Text variant="subtitle2" class="ml-4">{title}</Text>
-      </p>
+      <Text element="h2" variant="title" titleSize="lg">{name}</Text>
+      <Text element="p" variant="subtitle" class="ml-4 inline">{title}</Text>
     </hgroup>
     <Text class="flex-1">{content}</Text>
     <Button class="self-end" variant="primary" href="#projects" type="link"

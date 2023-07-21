@@ -34,7 +34,7 @@
     </ConditionalWrapper>
   </figure>
   <hgroup>
-    <Text variant="h2" class="text-2xl">
+    <Text element="h3" variant="emphasis" class="text-2xl not-italic">
       <ConditionalWrapper
         wrapped={!!link}
         wrapper="a"
@@ -52,11 +52,11 @@
       </ConditionalWrapper>
     </Text>
     <p>
-      <Text variant="subtitle2">{description}</Text>
+      <Text variant="subtitle">{description}</Text>
     </p>
   </hgroup>
   <div class="-mx-2 border-t-4 border-t-black dark:border-t-white">
-    <Text variant="subtitle1" class="ml-2 inline-block text-xs">
+    <Text variant="emphasis" class="ml-2 inline-block text-xs">
       {#each tags as tag (tag)}
         <span
           class="inline-block before:mr-1 before:text-[color:var(--tag-color)] before:content-['■'] after:italic after:[&:not(:last-child)]:mr-1 after:[&:not(:last-child)]:content-['|']"

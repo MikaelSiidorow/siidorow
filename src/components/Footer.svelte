@@ -24,8 +24,8 @@
         href="mailto:{email}"
         class="flex items-center no-underline hover:text-accent-main hover:dark:text-accent-alt"
       >
-        <Text variant="subtitle2" class="mr-2 text-xs">Email:</Text>
-        <Text variant="subtitle1" class="text-xs">{email}</Text></a
+        <Text variant="subtitle" class="mr-2 text-xs">Email:</Text>
+        <Text variant="emphasis" class="text-xs">{email}</Text></a
       >
     </li>
     <li>
@@ -35,8 +35,8 @@
         rel="noopener noreferrer"
         class="group flex items-center no-underline hover:text-accent-main hover:dark:text-accent-alt"
       >
-        <Text variant="subtitle2" class="mr-2 text-xs">Source:</Text>
-        <Text variant="subtitle1" class="text-xs">GitHub</Text>
+        <Text variant="subtitle" class="mr-2 text-xs">Source:</Text>
+        <Text variant="emphasis" class="text-xs">GitHub</Text>
         <Icon
           class="ml-1 fill-black group-hover:fill-accent-main dark:fill-white dark:group-hover:fill-accent-alt"
           icon="open_in_new"
