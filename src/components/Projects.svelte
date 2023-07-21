@@ -8,7 +8,11 @@
 
 <section id="projects" class="flex flex-col items-center gap-8 py-8">
   <hgroup>
-    <Text element="p" variant="emphasis" class="ml-6 text-2xl">My personal</Text
+    <Text
+      element="p"
+      variant="emphasis"
+      class="whitespace-nowrap ml-4 sm:ml-6 text-lg sm:text-2xl"
+      >My personal</Text
     >
     <Text element="h2" variant="title" titleSize="xl">Projects</Text>
   </hgroup>

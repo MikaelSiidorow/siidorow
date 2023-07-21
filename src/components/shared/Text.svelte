@@ -7,8 +7,8 @@
 
   const classes = {
     title: {
-      lg: "h-9 text-3xl before:h-6 before:translate-y-1/2 before:translate-x-4",
-      xl: "h-10 text-5xl before:h-8 before:translate-y-1/2 before:translate-x-6",
+      lg: "h-9 text-2xl before:h-6 before:translate-x-3 sm:text-3xl sm:before:h-6 before:translate-y-1/2 sm:before:translate-x-4",
+      xl: "h-10 text-3xl before:h-6 before:translate-x-4 sm:text-5xl sm:before:h-8 before:translate-y-1/2 sm:before:translate-x-6",
     },
   } as const;
 

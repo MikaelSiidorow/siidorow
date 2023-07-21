@@ -15,7 +15,7 @@
   <Nav />
 </header>
 <main
-  class="m-20 flex flex-col items-center gap-[20vh] text-black dark:text-white"
+  class="m-8 sm:gap-16 lg:m-20 flex flex-col items-center gap-8 lg:gap-[20vh] text-black dark:text-white"
 >
   <Hero {...heroProps} />
   <Projects {projects} />
