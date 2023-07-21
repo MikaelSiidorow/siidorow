@@ -1,6 +1,8 @@
 @tailwind base;
 @layer base {
   html {
+    color-scheme: dark light;
+    @apply antialiased;
     font-family: "Open Sans", "Roboto", sans-serif;
     @apply scroll-smooth;
     @apply text-black dark:text-white;
