@@ -1,6 +1,5 @@
 <script lang="ts">
   import Text from "./shared/Text.svelte";
-  import Button from "./shared/Button.svelte";
 
   export let name: string;
   export let title: string;
@@ -19,8 +18,9 @@
       <Text element="p" variant="subtitle" class="ml-4 inline">{title}</Text>
     </hgroup>
     <Text class="flex-1">{content}</Text>
-    <Button class="self-end" variant="primary" href="#projects" type="link"
-      >{buttonText}</Button
+    <a
+      class="self-end bg-accent-main py-2 px-4 text-2xl font-bold uppercase hover:scale-105 active:translate-x-1 active:translate-y-1 dark:bg-accent-alt cursor-pointer no-underline shadow-solid active:shadow-none dark:shadow-solid-dark"
+      href="#projects">{buttonText}</a
     >
   </div>
   <figure class="-order-1 flex flex-1 items-center justify-center p-6">
