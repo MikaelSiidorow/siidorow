@@ -15,6 +15,9 @@
 
   type IconList = Record<IconName, IconData>;
 
+  let _class: string = "";
+  export { _class as class };
+
   export let icon: IconName;
   export let size = "1rem";
   export let color = "#fff";
@@ -54,7 +57,7 @@
 </script>
 
 <svg
-  class={$$props.class}
+  class={_class}
   width={size}
   height={size}
   fill={color}
