@@ -8,10 +8,10 @@
 >
   <a
     href="#hero"
-    class="group flex items-center no-underline hover:text-accent-main hover:dark:text-accent-alt"
+    class="group flex items-center no-underline hover:text-accent"
   >
     <Icon
-      class="fill-black group-hover:fill-accent-main dark:fill-white group-hover:dark:fill-accent-alt"
+      class="fill-foreground group-hover:fill-accent"
       icon="logo"
       size="2rem"
     />
@@ -22,7 +22,7 @@
       <li>
         <a href={url} aria-label="open my {id}">
           <Icon
-            class="fill-black hover:fill-accent-main dark:fill-white hover:dark:fill-accent-alt"
+            class="fill-foreground hover:fill-accent"
             icon={id}
             size="2rem"
           />

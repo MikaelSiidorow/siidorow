@@ -9,10 +9,10 @@
 <footer class="flex flex-col items-center gap-8 py-8">
   <a
     href="#hero"
-    class="group flex items-center no-underline hover:text-accent-main hover:dark:text-accent-alt"
+    class="group flex items-center no-underline hover:text-accent"
   >
     <Icon
-      class="fill-black group-hover:fill-accent-main dark:fill-white dark:group-hover:fill-accent-alt"
+      class="fill-foreground group-hover:fill-accent"
       icon="logo"
       size="2rem"
     />
@@ -22,7 +22,7 @@
     <li>
       <a
         href="mailto:{email}"
-        class="flex items-center no-underline hover:text-accent-main hover:dark:text-accent-alt"
+        class="flex items-center no-underline hover:text-accent"
       >
         <Text variant="subtitle" class="mr-2 text-xs">Email:</Text>
         <Text variant="emphasis" class="text-xs">{email}</Text></a
@@ -33,12 +33,12 @@
         href={source}
         target="_blank"
         rel="noopener noreferrer"
-        class="group flex items-center no-underline hover:text-accent-main hover:dark:text-accent-alt"
+        class="group flex items-center no-underline hover:text-accent"
       >
         <Text variant="subtitle" class="mr-2 text-xs">Source:</Text>
         <Text variant="emphasis" class="text-xs">GitHub</Text>
         <Icon
-          class="ml-1 fill-black group-hover:fill-accent-main dark:fill-white dark:group-hover:fill-accent-alt"
+          class="ml-1 fill-foreground group-hover:fill-accent"
           icon="open_in_new"
         />
       </a>

@@ -10,7 +10,7 @@
 
 <section
   id="hero"
-  class="flex max-w-md flex-col border-4 border-black shadow-repeat before:border-b-4 before:border-black dark:border-white dark:shadow-repeat-dark dark:before:border-white lg:max-w-4xl lg:flex-row lg:before:border-r-4"
+  class="flex max-w-md flex-col border-4 border-foreground shadow-repeat before:border-b-4 before:border-foreground lg:max-w-4xl lg:flex-row lg:before:border-r-4"
 >
   <div id="card-content" class="flex flex-1 flex-col gap-4 p-4">
     <hgroup>
@@ -21,7 +21,7 @@
     </hgroup>
     <Text class="flex-1">{content}</Text>
     <a
-      class="hidden sm:block self-end bg-accent-main py-2 px-4 text-2xl font-bold uppercase hover:scale-105 active:translate-x-1 active:translate-y-1 dark:bg-accent-alt cursor-pointer no-underline shadow-solid active:shadow-none dark:shadow-solid-dark"
+      class="hidden sm:block self-end bg-accent py-2 px-4 text-2xl font-bold uppercase hover:scale-105 active:translate-x-1 active:translate-y-1 cursor-pointer no-underline shadow-solid active:shadow-none"
       href="#projects">{buttonText}</a
     >
   </div>

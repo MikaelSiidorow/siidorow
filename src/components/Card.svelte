@@ -12,7 +12,7 @@
 
 <div
   id="card-{name}"
-  class="relative z-0 flex max-w-xs flex-col p-2 before:pointer-events-none before:absolute before:top-0 before:left-0 before:h-full before:w-full before:border-4 before:border-black after:absolute after:-z-10 after:h-full after:w-full after:bg-accent-main before:dark:border-white after:dark:bg-accent-alt"
+  class="relative z-0 flex max-w-xs flex-col p-2 before:pointer-events-none before:absolute before:top-0 before:left-0 before:h-full before:w-full before:border-4 before:border-foreground after:absolute after:-z-10 after:h-full after:w-full after:bg-accent"
 >
   <figure>
     <a href={link} target="_blank" rel="noopener noreferrer">
@@ -33,14 +33,14 @@
         rel="noopener noreferrer"
       >
         {name}
-        <Icon class="fill-black dark:fill-white" icon="open_in_new" />
+        <Icon class="fill-foreground" icon="open_in_new" />
       </a>
     </Text>
     <p>
       <Text variant="subtitle">{description}</Text>
     </p>
   </hgroup>
-  <div class="-mx-2 border-t-4 border-t-black dark:border-t-white">
+  <div class="-mx-2 border-t-4 border-t-foreground">
     <Text variant="emphasis" class="ml-2 inline-block text-xs">
       {#each tags as tag (tag)}
         <span

@@ -23,11 +23,11 @@
   this={element}
   class={cn(
     variant === "title" &&
-      "relative z-0 max-w-fit whitespace-nowrap font-[1000] uppercase before:absolute before:-z-10 before:w-full before:bg-accent-main dark:before:bg-accent-alt",
+      "relative z-0 max-w-fit whitespace-nowrap font-[1000] uppercase before:absolute before:-z-10 before:w-full before:bg-accent",
     variant === "title" && classes.title[titleSize],
     variant === "emphasis" && "font-[1000] uppercase italic",
     variant === "subtitle" &&
-      "bg-black font-[1000] uppercase text-white dark:bg-white dark:text-black italic",
+      "bg-foreground font-[1000] uppercase text-background italic",
     _class,
   )}
 >
