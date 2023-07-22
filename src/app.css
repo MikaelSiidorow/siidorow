@@ -1,25 +1,29 @@
 @tailwind base;
 @layer base {
   :root {
-    --accent: #bb2649;
-    --foreground: #ffffff;
-    --background: #000000;
+    --accent: hsl(345.9, 66.2%, 44.1%);
+    --foreground: hsl(0, 0%, 87%);
+    --background: hsl(0, 0%, 7%);
   }
 
   @media (prefers-color-scheme: light) {
     :root {
-      --accent: #26bb98;
-      --foreground: #000000;
-      --background: #ffffff;
+      --accent: hsl(165.9, 66.2%, 44.1%);
+      --foreground: hsl(0, 0%, 7%);
+      --background: hsl(0, 0%, 87%);
     }
   }
+}
 
+@layer base {
   html {
     color-scheme: dark light;
     @apply antialiased;
     font-family: "Open Sans", "Roboto", sans-serif;
-    @apply scroll-smooth;
     @apply bg-background text-foreground;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
   }
 }
 @tailwind components;
